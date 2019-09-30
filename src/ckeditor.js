@@ -34,6 +34,9 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 
+import Indent from '@ckeditor/ckeditor5-indent/src/indent';
+import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock';
+
 export default class DecoupledEditor extends DecoupledEditorBase {}
 
 // Plugins to include in the build.
@@ -46,6 +49,8 @@ DecoupledEditor.builtinPlugins = [
 	UploadAdapter,
 	Autoformat,
 	Bold,
+	Indent,
+	IndentBlock,
 	Italic,
 	Strikethrough,
 	Underline,
@@ -75,6 +80,10 @@ DecoupledEditor.defaultConfig = {
 			'|',
 			'fontsize',
 			'fontfamily',
+			'|',
+			'outdent',
+			'indent',
+			'indentBlock',
 			'|',
 			'bold',
 			'italic',
